@@ -13,9 +13,13 @@ PRIMARY KEY (ACCOUNT_ID),
 UNIQUE (EMAIL_ADDRESS)
 ); 
 
+//Singwai edit
+//Add catagory table
 DROP TABLE IF EXISTS ITEMS;
 CREATE TABLE ITEMS
 (
+//Singwai edit
+//Add account id
 ITEM_ID int NOT NULL AUTO_INCREMENT,
 ITEM_NAME varchar(255) NOT NULL,
 ITEM_DESCRIPTION varchar(255) NOT NULL,
