@@ -23,7 +23,7 @@ IMG varchar(255) NOT NULL,
 CMT varchar(255) NOT NULL,
 PRIMARY KEY (CATEGORY_ID),
 UNIQUE (NAME)
-); 
+) CHARACTER SET = utf8; 
 
 
 DROP TABLE IF EXISTS ITEMS;
@@ -34,10 +34,12 @@ CREATE TABLE ITEMS
 ITEM_ID int NOT NULL AUTO_INCREMENT,
 ITEM_NAME varchar(255) NOT NULL,
 ITEM_DESCRIPTION varchar(255) NOT NULL,
+ITEM_CONDITION varchar(255) NOT NULL,
 ITEM_LOCATION varchar(255) NOT NULL,
 ITEM_PRICE varchar(255) NOT NULL,
 ITEM_STATUS varchar(255) NOT NULL,
 ITEM_PICTURES varchar(255) NOT NULL,
+ITEM_SOLD BOOLEAN NOT NULL DEFAULT 0;
 PRIMARY KEY (ITEM_ID)
 ) CHARACTER SET = utf8;
 
@@ -57,3 +59,6 @@ values ("Singwai@mail.com" , "Password"),
  ("Haiqiang@mail.com" , "Password"),
  ("php@mail.com" , "Password"),
  ("Google@mail.com" , "Password");
+ 
+insert into CATEGORIES (NAME,IMG)
+values ("家具"，"http://tradeincampus.com/category_img/furniture-icon.jpg"),("电子产品","http://tradeincampus.com/category_img/electronic-icon.jpg"),("服饰","http://tradeincampus.com/category_img/clothing-icon.jpg"),("书本","http://tradeincampus.com/category_img/Book-icons.jpg"),("运动产品","http://tradeincampus.com/category_img/sports-icons.jpg"),("其他","http://tradeincampus.com/category_img/others-icon.png");
