@@ -1,8 +1,11 @@
---DROP DATABASE IF EXISTS Mango;
---CREATE DATABASE Mango;
 USE Mango;
 
+SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS ACCOUNTS;
+DROP TABLE IF EXISTS CATEGORIES;
+DROP TABLE IF EXISTS ITEMS;
+SET FOREIGN_KEY_CHECKS = 1;
+
 CREATE TABLE ACCOUNTS
 (
 ACCOUNT_ID int NOT NULL AUTO_INCREMENT,
@@ -13,22 +16,17 @@ PRIMARY KEY (ACCOUNT_ID),
 UNIQUE (EMAIL_ADDRESS)
 ); 
 
-DROP TABLE IF EXISTS CATEGORIES;
 CREATE TABLE CATEGORIES
 (
+CATEGORY_ID int NOT NULL AUTO_INCREMENT, 
 CATEGORY_NAME varchar(255) NOT NULL,
 CATEGORY_IMG varchar(255) NOT NULL,
 CATEGORY_CMT varchar(255) NOT NULL,
-PRIMARY KEY (CATEGORY_NAME),
-UNIQUE (CATEGORY_NAME)
+PRIMARY KEY (CATEGORY_ID)
 ) CHARACTER SET = utf8; 
 
-
-DROP TABLE IF EXISTS ITEMS;
 CREATE TABLE ITEMS
 (
-//Singwai edit
-//Add account id
 ITEM_ID int NOT NULL AUTO_INCREMENT,
 ITEM_NAME varchar(255) NOT NULL,
 ITEM_DESCRIPTION varchar(255) NOT NULL,
@@ -39,10 +37,10 @@ ITEM_STATUS varchar(255) NOT NULL,
 ITEM_PICTURES varchar(255) NOT NULL,
 ITEM_POSTDATE DATE NOT NULL,
 ACCOUNT_ID int NOT NULL,
-CATEGORY_NAME varchar(255) NOT NULL,
+CATEGORY_ID int NOT NULL,
 PRIMARY KEY (ITEM_ID),
 FOREIGN KEY (ACCOUNT_ID) REFERENCES ACCOUNTS(ACCOUNT_ID),
-FOREIGN KEY (CATEGORY_NAME) REFERENCES CATEGORIES(CATEGORY_NAME)
+FOREIGN KEY (CATEGORY_ID) REFERENCES CATEGORIES(CATEGORY_ID)
 ) CHARACTER SET = utf8;
 
 insert into ACCOUNTS (EMAIL_ADDRESS, PASSWORD)
@@ -51,12 +49,9 @@ values ("Singwai@mail.com" , "Password"),
  ("php@mail.com" , "Password"),
  ("Google@mail.com" , "Password");
  
-insert into CATEGORIES (NAME,IMG)
-values ("家具"，"http://tradeincampus.com/category_img/furniture-icon.jpg"),("电子产品","http://tradeincampus.com/category_img/electronic-icon.jpg"),("服饰","http://tradeincampus.com/category_img/clothing-icon.jpg"),("书本","http://tradeincampus.com/category_img/Book-icons.jpg"),("运动产品","http://tradeincampus.com/category_img/sports-icons.jpg"),("其他","http://tradeincampus.com/category_img/others-icon.png");
-
-
-
-
-
-
-
+insert into CATEGORIES (CATEGORY_NAME, CATEGORY_IMG)
+values("FURNITURE", "http://tradeincampus.com/category_img/furniture-icon.jpg"), 
+("OTHERS", "http://tradeincampus.com/category_img/furniture-icon.jpg"),
+("SPORTS", "http://tradeincampus.com/category_img/furniture-icon.jpg"),
+("OFFICE", "http://tradeincampus.com/category_img/furniture-icon.jpg"),
+("BEAUTY", "http://tradeincampus.com/category_img/furniture-icon.jpg");
