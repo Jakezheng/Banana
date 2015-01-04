@@ -35,7 +35,7 @@ ITEM_LOCATION varchar(255) NOT NULL,
 ITEM_PRICE varchar(255) NOT NULL,
 ITEM_STATUS varchar(255) NOT NULL,
 ITEM_PICTURES varchar(255) NOT NULL,
-ITEM_POSTDATE DATE NOT NULL,
+ITEM_POSTDATE DATETIME DEFAULT CURRENT_TIMESTAMP,
 ACCOUNT_ID int NOT NULL,
 CATEGORY_ID int NOT NULL,
 PRIMARY KEY (ITEM_ID),
@@ -55,3 +55,8 @@ values("FURNITURE", "http://tradeincampus.com/category_img/furniture-icon.jpg"),
 ("SPORTS", "http://tradeincampus.com/category_img/furniture-icon.jpg"),
 ("OFFICE", "http://tradeincampus.com/category_img/furniture-icon.jpg"),
 ("BEAUTY", "http://tradeincampus.com/category_img/furniture-icon.jpg");
+
+INSERT INTO ITEMS (ITEM_NAME, ITEM_DESCRIPTION, ITEM_CONDITION, ITEM_PRICE, ITEM_STATUS, ITEM_PICTURES, ACCOUNT_ID, CATEGORY_ID)
+VALUES ("GOPRO", "VERY VERY GOOD CAMERA", "BRAND NEW", "100", "ACTIVE", "http://tradeincampus.com/category_img/furniture-icon.jpg", "1", "1");
+
+
