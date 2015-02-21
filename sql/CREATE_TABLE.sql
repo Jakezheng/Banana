@@ -32,8 +32,8 @@ CREATE TABLE CATEGORIES
 (
 CATEGORY_ID int NOT NULL AUTO_INCREMENT, 
 CATEGORY_NAME varchar(255) NOT NULL,
-CATEGORY_IMG varchar(255) NOT NULL,
-CATEGORY_CMT varchar(255) NOT NULL,
+CATEGORY_IMAGE varchar(255) NOT NULL,
+CATEGORY_COMMENT varchar(255) NOT NULL,
 PRIMARY KEY (CATEGORY_ID)
 ) CHARACTER SET = utf8; 
 
@@ -75,20 +75,11 @@ values
 ("A", "ACTIVE"),
 ("I", "INACTIVE");
 
-insert into ACCOUNTS (EMAIL_ADDRESS, PASSWORD)
-values ("Singwai@mail.com" , "Password"),
- ("Haiqiang@mail.com" , "Password"),
- ("php@mail.com" , "Password"),
- ("Google@mail.com" , "Password");
- 
 insert into CATEGORIES (CATEGORY_NAME, CATEGORY_IMG)
 values("FURNITURE", "http://tradeincampus.com/category_img/furniture-icon.jpg"), 
 ("OTHERS", "http://tradeincampus.com/category_img/furniture-icon.jpg"),
 ("SPORTS", "http://tradeincampus.com/category_img/furniture-icon.jpg"),
 ("OFFICE", "http://tradeincampus.com/category_img/furniture-icon.jpg"),
 ("BEAUTY", "http://tradeincampus.com/category_img/furniture-icon.jpg");
-
-INSERT INTO ITEMS (ITEM_NAME, ITEM_DESCRIPTION, ITEM_CONDITION, ITEM_PRICE, ITEM_STATUS, ITEM_PICTURES, ACCOUNT_ID, CATEGORY_ID)
-VALUES ("GOPRO", "VERY VERY GOOD CAMERA", "BRAND NEW", "100", "ACTIVE", "http://tradeincampus.com/category_img/furniture-icon.jpg", "1", "1");
 
 
