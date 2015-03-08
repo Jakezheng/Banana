@@ -20,7 +20,7 @@ text_file = open("ItemData.sql", 'w')
 
 text_file.write("USE Mango;\n")
 
-text_file.write("insert into ITEMS (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, ITEM_CONDITION, ITEM_LOCATION, ITEM_PRICE, ITEM_STATUS, ITEM_PICTURES, ACCOUNT_ID, CATEGORY_ID)\nvalues\n")
+text_file.write("insert into ITEMS (ITEM_NAME, ITEM_DESCRIPTION, ITEM_CONDITION, ITEM_LOCATION, ITEM_PRICE, ITEM_STATUS, ITEM_PICTURES, ACCOUNT_ID, CATEGORY_ID)\nvalues\n")
 
 for i in range(0,30):
 	category = randint(1,5)
