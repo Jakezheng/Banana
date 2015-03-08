@@ -31,7 +31,7 @@ for i in range(0,30):
 	itemStatus_rand = randint(0,1)
 
 	if i == 29:
-		text_file.write("(" + itemName[itemName_rand] + "'," + "'FUCK'" + ",'" + itemCondition[itemCond_rand] + "'," + "'FLUSHING'" + ",'" + str(randint(0,100)) +"','" + itemStatus[itemStatus_rand] + "','" + imageUrl[imageRan] + "'," + str(account_rand) + "," + str(category) + ");")
+		text_file.write("('" + itemName[itemName_rand] + "'," + "'FUCK'" + ",'" + itemCondition[itemCond_rand] + "'," + "'FLUSHING'" + ",'" + str(randint(0,100)) +"','" + itemStatus[itemStatus_rand] + "','" + imageUrl[imageRan] + "'," + str(account_rand) + "," + str(category) + ");")
 		break		
 
 	text_file.write("('" + itemName[itemName_rand] + "'," + "'FUCK'" + ",'" + itemCondition[itemCond_rand] + "'," + "'FLUSHING'" + ",'" + str(randint(0,100)) +"','" + itemStatus[itemStatus_rand] + "','" + imageUrl[imageRan] + "'," + str(account_rand) + "," + str(category) + "),\n")
