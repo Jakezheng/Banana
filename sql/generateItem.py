@@ -27,7 +27,12 @@ for i in range(0,30):
 	itemName_rand = randint(0,4)
 	itemCond_rand = randint(0,1)
 	itemStatus_rand = randint(0,1)
-	text_file.write("(" + str(i) + "," + itemName[itemName_rand] + "," + "FUCK" + "," + itemCondition[itemCond_rand] + "," + "FLUSHING" + "," + str(randint(0,100)) +"," + itemStatus[itemStatus_rand] + "," + imageUrl[imageRan] + "," + str(account_rand) + "," + str(category) + ")\n")
+
+	if i == 29:
+		text_file.write("('" + str(i) + "','" + itemName[itemName_rand] + "'," + "'FUCK'" + ",'" + itemCondition[itemCond_rand] + "'," + "'FLUSHING'" + ",'" + str(randint(0,100)) +"','" + itemStatus[itemStatus_rand] + "','" + imageUrl[imageRan] + "','" + str(account_rand) + "','" + str(category) + "');")
+		break		
+
+	text_file.write("('" + str(i) + "','" + itemName[itemName_rand] + "'," + "'FUCK'" + ",'" + itemCondition[itemCond_rand] + "'," + "'FLUSHING'" + ",'" + str(randint(0,100)) +"','" + itemStatus[itemStatus_rand] + "','" + imageUrl[imageRan] + "','" + str(account_rand) + "','" + str(category) + "'),\n")
 
 text_file.close()
 
