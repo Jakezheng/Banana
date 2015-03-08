@@ -25,7 +25,7 @@ text_file.write("insert into ITEMS (ITEM_NAME, ITEM_DESCRIPTION, ITEM_CONDITION,
 for i in range(0,30):
 	category = randint(1,5)
 	imageRan = randint(0,4)
-	account_rand = randint(0,10)
+	account_rand = randint(1,10)
 	itemName_rand = randint(0,4)
 	itemCond_rand = randint(0,1)
 	itemStatus_rand = randint(0,1)
