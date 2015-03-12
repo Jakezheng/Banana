@@ -1,18 +1,19 @@
 import sys
 from random import randint
 
-imageUrl = ["http://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0CAcQjRw&url=http%3A%2F%2Ffun-time.website%2Fcute-blue-cartoon-penguin%2F&ei=np37VO-fL4aYNs2ghJAD&bvm=bv.87611401,d.eXY&psig=AFQjCNE1Kr90IvpD9bUa4XQPZ4RWgV_JKA&ust=1425862426981696",
-			"http://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0CAcQjRw&url=http%3A%2F%2Fwww.blindenreport.de%2Fwp-content%2Fcss%2Fcartoon-globe.html&ei=-Z37VMeLLMqMNpiygugL&bvm=bv.87611401,d.eXY&psig=AFQjCNE1Kr90IvpD9bUa4XQPZ4RWgV_JKA&ust=1425862426981696",
-			"http://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0CAcQjRw&url=http%3A%2F%2Fwww.clipartpanda.com%2Fcategories%2Fdinosaur-cartoon&ei=CZ77VPDbO8GngwTlh4CQBQ&bvm=bv.87611401,d.eXY&psig=AFQjCNE1Kr90IvpD9bUa4XQPZ4RWgV_JKA&ust=1425862426981696",
-			"http://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0CAcQjRw&url=http%3A%2F%2Fwww.wikihow.com%2FDraw-a-Cartoon-Penguin&ei=F577VJX8BIrEggTkuoTwAw&bvm=bv.87611401,d.eXY&psig=AFQjCNE1Kr90IvpD9bUa4XQPZ4RWgV_JKA&ust=1425862426981696",
-			"http://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0CAcQjRw&url=http%3A%2F%2Fgraphicleftovers.com%2Fgraphic%2Fcartoon-powerful-eagle&ei=JZ77VMTEDo-INpSCgaAB&bvm=bv.87611401,d.eXY&psig=AFQjCNE1Kr90IvpD9bUa4XQPZ4RWgV_JKA&ust=1425862426981696"]
+imageUrl = ["http://tradeincampus.com/item_img/item1.png",
+			"http://tradeincampus.com/item_img/item2.jpg",
+			"http://tradeincampus.com/item_img/item3.jpg",
+			"http://tradeincampus.com/item_img/item4.jpg",
+			"http://tradeincampus.com/item_img/item5.jpg",
+			"http://tradeincampus.com/item_img/item6.jpg",
+			"http://tradeincampus.com/item_img/item7.jpg"]
 
 itemName = ["a","b","c","d","e"]
 
 itemCondition = ["OLD", "NEW"]
 
 itemStatus = ["SOLD", "ACTIVE"]
-
 
 print("Creating new file")
 
