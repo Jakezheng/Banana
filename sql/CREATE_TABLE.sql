@@ -75,7 +75,7 @@ values
 ("A", "ACTIVE"),
 ("I", "INACTIVE");
 
-insert into CATEGORIES (CATEGORY_NAME, CATEGORY_IMG)
+insert into CATEGORIES (CATEGORY_NAME, CATEGORY_IMAGE)
 values("FURNITURE", "http://tradeincampus.com/category_img/furniture-icon.jpg"), 
 ("OTHERS", "http://tradeincampus.com/category_img/furniture-icon.jpg"),
 ("SPORTS", "http://tradeincampus.com/category_img/furniture-icon.jpg"),
